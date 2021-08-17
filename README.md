@@ -19,7 +19,7 @@ or
   ``kubectl apply -f k8s/ingress-cm.yaml``
 
 ## Deploy tcp-echo
-Rename image to your image name in spec.containers.image!
+Rename image to your image name in the __spec.containers.image__ !
   
   ``kubectl apply -f k8s/tcpecho-deployment.yaml``
 
