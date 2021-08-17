@@ -1,0 +1,10 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: controller
+        ports:
+         - containerPort: 5000
+           hostPort: 5000
+
+# kubectl patch deployment ingress-nginx-controller -n ingress-nginx --patch-file nginx-ingress-controller-patch.yaml

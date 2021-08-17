@@ -1,0 +1,7 @@
+spec:
+  ports:
+  - nodePort: 31100
+    port: 5000
+    name: tcp-echo
+
+# kubectl patch service ingress-nginx-controller -n ingress-nginx --patch-file nginx-ingress-svc-controller-patch.yaml
