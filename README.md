@@ -16,18 +16,18 @@ or
   kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.48.1/deploy/static/provider/cloud/deploy.yaml
 
 ## Deploy tcp-services ConfigMap
-  kubectl apply -f ingress-cm.yaml
+  kubectl apply -f k8s/ingress-cm.yaml
 
 ## Deploy tcp-echo
 Rename image to your image name in spec.containers.image!
   
-  kubectl apply -f tcpecho-deployment.yaml
+  kubectl apply -f k8s/tcpecho-deployment.yaml
 
 ## Path nginx ingress controller
 
-  kubectl patch deployment ingress-nginx-controller -n ingress-nginx --patch-file nginx-ingress-controller-patch.yaml
+  kubectl patch deployment ingress-nginx-controller -n ingress-nginx --patch-file k8s/nginx-ingress-controller-patch.yaml
 
-  kubectl patch service ingress-nginx-controller -n ingress-nginx --patch-file nginx-ingress-svc-controller-patch.yaml
+  kubectl patch service ingress-nginx-controller -n ingress-nginx --patch-file k8s/nginx-ingress-svc-controller-patch.yaml
 
 ## Check nginx services
   kubectl get all -n ingress-nginx
