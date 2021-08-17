@@ -23,7 +23,7 @@ Rename image to your image name in spec.containers.image!
   
   ``kubectl apply -f k8s/tcpecho-deployment.yaml``
 
-## Path nginx ingress controller
+## Patch nginx ingress controller nad service
 
   ``kubectl patch deployment ingress-nginx-controller -n ingress-nginx --patch-file k8s/nginx-ingress-controller-patch.yaml``
 
